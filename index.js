@@ -126,18 +126,17 @@ uSorted: function(collection, iteratee) {
   return sorted
 },
 
-uniq: function(array, isSorted=false, iteratee=false) {
-  let distinctValues = [...new Set(array)]
-  if (isSorted == true){
-    return distinctValues
-  } else if (iteratee != null) {
-    return Array.from(new Set(collection))
-  } else {
-    let moddedVals = new Set()
-    let uniqVals = new Set()
-    for (let element of collection) {
-      let moddedVal = iteratee(element)
-      if (!modifiedVals.has(moddedVal)) {
+uniq: function(collection, sorted=false, iteratee=false) {
+      if (sorted) {
+        return fi.uniqSorted(collection, iteratee)
+      } else if (!iteratee) {
+        return Array.from(new Set(collection))
+      } else {
+        const modifiedVals = new Set()
+        const uniqVals = new Set()
+        for (let val of collection) {
+          const moddedVal = iteratee(val)
+          if (!modifiedVals.has(moddedVal)) {
             modifiedVals.add(moddedVal)
             uniqVals.add(val)
           }
@@ -145,7 +144,6 @@ uniq: function(array, isSorted=false, iteratee=false) {
         return Array.from(uniqVals)
       }
     },
-
 keys: function() {
 
 },

@@ -145,12 +145,21 @@ uniq: function(collection, sorted=false, iteratee=false) {
       }
     },
 keys: function(object) {
-  keys = []
+  let keys = []
   for (let key in object) {
     keys.push(key)
   }
   return keys
 },
+
+
+values: function(object) {
+  let values = []
+  for (let values in object) {
+    values.push(value)
+  }
+  return values
+}
 
   }
 })()

@@ -150,8 +150,7 @@ values: function(object) {
 },
 
 functions: function(object) {
-  let values = (object) => Object.getOwnPropertyNames(object).filter(item => typeof object[item] === 'function')
-  return values.sort()
+  (object) => Object.getOwnPropertyNames(object).filter(item => typeof object[item] === 'function').sort()
 }
   }
 })()

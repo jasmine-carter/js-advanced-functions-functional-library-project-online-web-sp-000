@@ -150,7 +150,7 @@ values: function(object) {
 },
 
 functions: function(object) {
-  (testObject) => Object.getOwnPropertyNames(testObject).filter(item => typeof testObject[item] === 'function')
+  (object) => Object.getOwnPropertyNames(object).filter(item => typeof object[item] === 'function')
 }
   }
 })()

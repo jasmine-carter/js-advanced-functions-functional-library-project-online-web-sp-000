@@ -135,7 +135,7 @@ uniq: function(array, isSorted=false, iteratee=false) {
   } else {
     let moddedVals = new Set()
     let uniqVals = new Set()
-    for (let element of collection)
+    for (let element of collection) {
       let moddedVal = iteratee(element)
       if (!modifiedVals.has(moddedVal)) {
             modifiedVals.add(moddedVal)

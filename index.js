@@ -149,6 +149,9 @@ values: function(object) {
   return Object.values(object)
 },
 
+functions: function(object) {
+  (testObject) => Object.getOwnPropertyNames(testObject).filter(item => typeof testObject[item] === 'function')
+}
   }
 })()
 

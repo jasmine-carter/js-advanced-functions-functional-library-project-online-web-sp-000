@@ -36,10 +36,6 @@ const fi = (function() {
       return acc
     },
 
-    functions: function() {
-
-    },
-
     find: function(collection, predicate) {
      if (!(collection instanceof Array))
        collection = Object.values(collection)
@@ -153,9 +149,6 @@ values: function(object) {
   return Object.values(object)
 },
 
-functions: function(object) {
-  return Object.getOwnPropertyNames(object).filter(item => typeof object[item] ===function)
-}
   }
 })()
 

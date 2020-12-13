@@ -134,11 +134,11 @@ uniq: function(collection, sorted=false, iteratee=false) {
       } else {
         const modifiedVals = new Set()
         const uniqVals = new Set()
-        for (let val of collection) {
-          const moddedVal = iteratee(val)
+        for (let element of collection) {
+          const moddedVal = iteratee(element)
           if (!modifiedVals.has(moddedVal)) {
             modifiedVals.add(moddedVal)
-            uniqVals.add(val)
+            uniqVals.add(element)
           }
         }
         return Array.from(uniqVals)

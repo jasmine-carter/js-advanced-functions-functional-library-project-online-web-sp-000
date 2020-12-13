@@ -154,11 +154,7 @@ keys: function(object) {
 
 
 values: function(object) {
-  let values = []
-  for (let value in object) {
-    values.push(value)
-  }
-  return values
+  return Object.values(object)
 },
 
   }

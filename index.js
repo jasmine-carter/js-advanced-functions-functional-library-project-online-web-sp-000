@@ -128,10 +128,17 @@ uSorted: function(collection, iteratee) {
 
 uniq: function(array, isSorted=false, iteratee=false) {
   let distinctValues = [...new Set(array)]
+  if (isSorted == true){]
+    return distinctValues
+  }
   if (iteratee != null) {
     //for every value in distince values, check on callback and return new array
     matchedValues = new Set()
-    for (let i = 1; i < distinctValues.length; i++)
+    for (let element of collection)
+    let moddedVal = iteratee(element)
+    if (!distinctValues.has(moddedVal)) {
+      matchedValues.add(moddedVal)
+    }
     ///for each element in set, check
   }
   return distinctValues

@@ -154,7 +154,7 @@ values: function(object) {
 },
 
 functions: function(object) {
-
+  return Object.getOwnPropertyNames(object).filter(item => typeof object[item] ===function)
 }
   }
 })()

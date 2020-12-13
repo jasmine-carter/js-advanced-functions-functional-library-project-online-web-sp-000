@@ -128,7 +128,7 @@ uSorted: function(collection, iteratee) {
 
 uniq: function(array, isSorted=false, iteratee=false) {
   let distinctValues = [...new Set(array)]
-  if (isSorted == true){]
+  if (isSorted == true){
     return distinctValues
   } else if (iteratee != null) {
     return Array.from(new Set(collection))

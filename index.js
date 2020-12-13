@@ -138,7 +138,7 @@ uniq: function(array, isSorted=false, iteratee=false) {
     let moddedVal = iteratee(element)
     if (!distinctValues.has(moddedVal)) {
       matchedValues.add(moddedVal)
-    }
+    } 
     ///for each element in set, check
   }
   return distinctValues

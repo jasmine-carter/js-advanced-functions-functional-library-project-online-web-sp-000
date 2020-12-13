@@ -145,7 +145,11 @@ uniq: function(collection, sorted=false, iteratee=false) {
       }
     },
 keys: function(object) {
-  
+  keys = []
+  for (let key in object) {
+    keys.push(key)
+  }
+  return keys
 },
 
   }
